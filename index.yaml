@@ -25,6 +25,30 @@ entries:
   flarum:
   - apiVersion: v2
     appVersion: v1.2.0
+    created: "2022-02-07T22:40:31.751194728Z"
+    dependencies:
+    - name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.2
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: Simple forum software for building great communities.
+    digest: aeba386e93314ea4e03ec32ee44fd32ac92187ead79095f8bc13837801da3536
+    home: https://flarum.org
+    icon: https://garronej.github.io/helm-charts-sill/icons/flarum.png
+    keywords:
+    - Forum
+    name: flarum
+    sources:
+    - https://github.com/flarum/flarum
+    - https://github.com/etalab/helm-charts/tree/main/charts/flarum
+    type: application
+    urls:
+    - https://github.com/garronej/helm-charts-sill/releases/download/flarum-0.0.6/flarum-0.0.6.tgz
+    version: 0.0.6
+  - apiVersion: v2
+    appVersion: v1.2.0
     created: "2022-02-07T17:11:10.643366493Z"
     dependencies:
     - name: mariadb
@@ -201,4 +225,4 @@ entries:
     urls:
     - https://github.com/garronej/helm-charts-sill/releases/download/vscode-5.1.2/vscode-5.1.2.tgz
     version: 5.1.2
-generated: "2022-02-07T18:15:03.843614424Z"
+generated: "2022-02-07T22:40:31.751214929Z"
