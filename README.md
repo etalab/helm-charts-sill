@@ -13,7 +13,7 @@ To use the repo on helm (version 3+):
 helm repo add inseefrlab https://etalab.github.io/helm-charts
 ```
 
-The repo is also browsable directly https://etalab.github.io/helm-charts/index.yaml  
+The repo is also browsable directly https://garronej.github.io/helm-charts-sill/index.yaml  
 - Published via [GitHub Pages](https://github.com/etalab/helm-charts/tree/gh-pages)
 - Deployed by [GitHub Actions](https://github.com/etalab/helm-charts/blob/main/.github/workflows/ci.yml)
 
