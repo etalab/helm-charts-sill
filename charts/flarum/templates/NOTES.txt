@@ -1,0 +1,4 @@
+{{- if .Values.ingress.enabled }}
+- Vous pouvez vous connecter à votre instance de test Flarum à ce [lien](https://{{ .Values.ingress.hostname }})
+{{- end }}
+

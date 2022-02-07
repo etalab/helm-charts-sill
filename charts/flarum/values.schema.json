@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "ingress": {
+      "type": "object",
+      "form": true,
+      "title": "Ingress Details",
+      "properties": {
+        "hostname": {
+          "type": "string",
+          "form": true,
+          "title": "Hostname",
+          "x-form": {
+            "hidden": true,
+            "value": "{{project.id}}-{{k8s.randomSubdomain}}.{{k8s.domain}}"
+          }
+        }
+      }
+    },
+    "config": {
+      "description": "Required configuration: https://github.com/mondediefr/docker-flarum#required-environment-variable-for-first-installation",
+      "type": "object",
+      "properties": {
+        "user": {
+          "type": "string",
+          "description": "username de l'administrateur",
+          "default": "admin",
+          "x-form": {
+            "value": "{{project.id}}"
+          }
+        },
+        "pass": {
+          "type": "string",
+          "description": "Mot de passe de l'administrateur",
+          "default": "admin",
+          "x-form": {
+            "value": "{{project.passwod}}"
+          }
+        },
+        "mail": {
+          "type": "string",
+          "description": "Email de l'administrateur",
+          "default": "change@me.org",
+          "x-form": {
+            "value": "{{user.email}}"
+          }
+        },
+        "title": {
+          "type": "string",
+          "description": "Titre de l'instance de ce forum",
+          "default": "Demo SILL"
+        }
+      }
+    }
+  }
+}

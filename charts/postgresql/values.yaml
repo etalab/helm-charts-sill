@@ -1,0 +1,10 @@
+postgresql:
+  image:
+    tag: "12"
+
+global:
+  postgresql:
+    servicePort: 5432
+    
+    discoverable:
+      allow: true
