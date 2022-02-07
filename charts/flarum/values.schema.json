@@ -35,7 +35,7 @@
           "description": "Mot de passe de l'administrateur",
           "default": "admin",
           "x-form": {
-            "value": "{{project.passwod}}"
+            "value": "{{project.password}}"
           }
         },
         "mail": {
