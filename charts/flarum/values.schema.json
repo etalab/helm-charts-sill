@@ -25,10 +25,7 @@
         "user": {
           "type": "string",
           "description": "username de l'administrateur",
-          "default": "admin",
-          "x-form": {
-            "value": "{{project.id}}"
-          }
+          "default": "admin"
         },
         "pass": {
           "type": "string",

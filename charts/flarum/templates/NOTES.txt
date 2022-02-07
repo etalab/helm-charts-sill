@@ -1,4 +1,5 @@
+- Votre compte d'admin est : **{{ .Values.config.user }}**
+- Votre mot de passe d'admin est : **{{ .Values.config.pass }}**
 {{- if .Values.ingress.enabled }}
 - Vous pouvez vous connecter à votre instance de test Flarum à ce [lien](https://{{ .Values.ingress.hostname }})
 {{- end }}
-
