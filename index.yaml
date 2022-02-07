@@ -22,4 +22,161 @@ entries:
     urls:
     - https://github.com/garronej/helm-charts-sill/releases/download/chromium-5.0.7/chromium-5.0.7.tgz
     version: 5.0.7
-generated: "2022-02-07T17:05:00.598230459Z"
+  flarum:
+  - apiVersion: v2
+    appVersion: v1.2.0
+    created: "2022-02-07T17:11:10.643366493Z"
+    dependencies:
+    - name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.2
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: Simple forum software for building great communities.
+    digest: fda75429ff7266c6c9d5b451d2616e61989cc3d0232a7d396741f6edffe7e9b6
+    home: https://flarum.org
+    icon: https://garronej.github.io/helm-charts-sill/icons/flarum.png
+    keywords:
+    - Forum
+    name: flarum
+    sources:
+    - https://github.com/flarum/flarum
+    - https://github.com/etalab/helm-charts/tree/main/charts/flarum
+    type: application
+    urls:
+    - https://github.com/garronej/helm-charts-sill/releases/download/flarum-0.0.5/flarum-0.0.5.tgz
+    version: 0.0.5
+  jupyter:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-02-07T17:11:10.848043267Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: Jupyter is a notebook accessible through a web browser. You can use
+      it for Python and Spark.
+    digest: fd5957f36d40df3be6fa23b42595056df3dff199a627169459bc357a003dff25
+    home: https://jupyter.org/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/jupyter.png
+    name: jupyter
+    sources:
+    - https://github.com/InseeFrLab/jupyter-datascience
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/jupyter
+    - https://github.com/jupyter/docker-stacks
+    type: application
+    urls:
+    - https://github.com/garronej/helm-charts-sill/releases/download/jupyter-6.0.6/jupyter-6.0.6.tgz
+    version: 6.0.6
+  mlflow:
+  - apiVersion: v2
+    appVersion: "1"
+    created: "2022-02-07T17:11:11.056717148Z"
+    dependencies:
+    - enabled: true
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.14
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: MLflow is an open source platform to manage the ML lifecycle, including
+      experimentation, reproducibility, deployment, and a central model registry.
+    digest: 31594081e5da5530731567ed7111b5571f79b7b2dd10a7b3f9c88e2d4a3fcaf0
+    home: https://mlflow.org
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/mlflow.png
+    name: mlflow
+    sources:
+    - https://github.com/InseeFrLab/mlflow
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/mlflow
+    type: application
+    urls:
+    - https://github.com/garronej/helm-charts-sill/releases/download/mlflow-3.0.7/mlflow-3.0.7.tgz
+    version: 3.0.7
+  nocodb:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-02-07T17:11:11.23833728Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: NocoDB is an open source NoCode platform that turns any database
+      into a smart spreadsheet
+    digest: a3ba930e52a4c003efe875c316ff3dab9584cf6ecb6b062ff5c20f0d6f9ca1eb
+    home: https://www.nocodb.com/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/nocodb.png
+    name: nocodb
+    sources:
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/nocodb
+    - https://hub.docker.com/r/nocodb/nocodb
+    type: application
+    urls:
+    - https://github.com/garronej/helm-charts-sill/releases/download/nocodb-0.0.3/nocodb-0.0.3.tgz
+    version: 0.0.3
+  postgresql:
+  - apiVersion: v2
+    appVersion: "1"
+    created: "2022-02-07T17:11:11.449788166Z"
+    dependencies:
+    - enabled: true
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.15.1
+    description: An object-relational database management system, a database server
+    digest: 3b3dd0af079a60ade08db58008c546fefba9bbe341f3d5dd319b36c985bb9100
+    home: https://www.postgresql.org/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/post.png
+    name: postgresql
+    sources:
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/postgresql
+    - https://github.com/bitnami/charts/tree/master/bitnami/postgresql
+    - https://github.com/bitnami/bitnami-docker-postgresql
+    type: application
+    urls:
+    - https://github.com/garronej/helm-charts-sill/releases/download/postgresql-2.1.7/postgresql-2.1.7.tgz
+    version: 2.1.7
+  rstudio:
+  - apiVersion: v2
+    created: "2022-02-07T17:11:11.620380278Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: R Studio is the reference environment / IDE for programming with
+      R, a programming language used for data processing and statistical analysis.
+      You can use it for spark.
+    digest: a9b9dae5885b653082c47795f12a8905838481f49452794f9b2675f87cbdeecc
+    home: https://www.rstudio.com/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/rstudio.png
+    name: rstudio
+    sources:
+    - https://github.com/InseeFrLab/rstudio
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/rstudio
+    - https://github.com/rocker-org/rocker
+    type: application
+    urls:
+    - https://github.com/garronej/helm-charts-sill/releases/download/rstudio-6.1.7/rstudio-6.1.7.tgz
+    version: 6.1.7
+  ubuntu:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-02-07T17:11:11.830039261Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: Ubuntu with a graphical user interface.
+    digest: f801d0d3ee5322a020af0fcec00fadb093bd2da3f7c103128b374366d9c84c03
+    home: https://www.ubuntu-fr.org/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/ubuntu.png
+    name: ubuntu
+    sources:
+    - https://github.com/InseeFrLab/ubuntu-vnc
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/ubuntu
+    type: application
+    urls:
+    - https://github.com/garronej/helm-charts-sill/releases/download/ubuntu-5.0.5/ubuntu-5.0.5.tgz
+    version: 5.0.5
+generated: "2022-02-07T17:11:11.830047161Z"
