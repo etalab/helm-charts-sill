@@ -3,7 +3,7 @@
     <br>
     <br>
     <a href="https://github.com/garronej/helm-charts-sill/actions">
-      <img src="https://github.com/etalab/helm-charts-sill/actions/workflows/ci.yml/badge.svg?branch=main">
+      <img src="https://github.com/garronej/helm-charts-sill/actions/workflows/ci.yml/badge.svg?branch=main">
     </a>
 </p>
 
