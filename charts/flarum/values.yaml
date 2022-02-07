@@ -80,6 +80,22 @@ tolerations: []
 
 affinity: {}
 
+# NOTE: Trick for mariadb
+persistence:
+  enabled: true
+  ## database data Persistent Volume Storage Class
+  ## If defined, storageClassName: <storageClass>
+  ## If set to "-", storageClassName: "", which disables dynamic provisioning
+  ## If undefined (the default) or set to null, no storageClassName spec is
+  ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
+  ##   GKE, AWS & OpenStack)
+  ##
+  # storageClass: "-"
+  accessMode: ReadWriteOnce
+  size: 10Gi
+  # existingClaim: ""
+
+
 mariadb:
   auth: 
     rootPassword: "admin"
@@ -87,3 +103,5 @@ mariadb:
     username: "admin"
     password: "admin"
   fullnameOverride: "mariadb-flarum"
+  persistence: 
+    existingClaim: "mariadb-4-flarum"

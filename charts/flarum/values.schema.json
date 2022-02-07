@@ -49,6 +49,26 @@
           "default": "Demo SILL"
         }
       }
+    },
+    "mariadb": {
+      "description": "MariaDB configuration",
+      "type": "object",
+      "properties": {
+        "persistence": {
+          "type": "object",
+          "description": "persistance",
+          "properties": {
+            "existingClaim": {
+              "type": "string",
+              "description": "Volume de donnée",
+              "x-form": {
+                "hidden": true,
+                "value": "mariadb-flarum-{{k8s.randomSubdomain}}"
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
