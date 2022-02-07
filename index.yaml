@@ -1,0 +1,25 @@
+apiVersion: v1
+entries:
+  chromium:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-02-07T17:05:00.801811379Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: La distribution open source du navigateur Google Chrome.
+    digest: 3f54840fc6f651ed9acf7334a537d0819b8966b2c0f58bc17f10511cb8944e7c
+    home: https://www.chromium.org/chromium-projects/
+    icon: https://garronej.github.io/helm-charts-sill/icons/chromium.svg
+    keywords:
+    - Navigateur
+    name: chromium
+    sources:
+    - https://github.com/chromium/chromium
+    - https://github.com/garronej/helm-charts-sill/tree/main/charts/chromium
+    type: application
+    urls:
+    - https://github.com/garronej/helm-charts-sill/releases/download/chromium-5.0.7/chromium-5.0.7.tgz
+    version: 5.0.7
+generated: "2022-02-07T17:05:00.598230459Z"
