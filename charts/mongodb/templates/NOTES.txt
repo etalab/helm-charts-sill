@@ -1,0 +1,30 @@
+{{- $replicaCount := int .Values.mongodb.replicaCount }}
+{{- $portNumber := int .Values.mongodb.service.port }}
+{{- $fullname := include "library-chart.fullname" . }}
+{{- $user := .Values.mongodb.auth.username }}
+{{- $password := .Values.mongodb.auth.password }}
+{{- $db := .Values.mongodb.auth.database }}
+{{- $pvcList := list }}
+{{- $mongoList := list }}
+{{- range $e, $i := until $replicaCount }}
+{{- $pvcList = append $pvcList (printf "datadir-%s-%d" $fullname $i) }}
+{{- $mongoList = append $mongoList (printf "%s-%d.%s-headless:%d" $fullname $i $fullname $portNumber) }}
+{{- end }}
+- the connection string is : 
+```
+**mongodb://{{ $user }}:{{ $password }}@{{ (include "mongoList" .)}}/{{ $db }}**
+```
+- example for python :
+
+```
+from pymongo import MongoClient
+client = MongoClient('mongodb://{{ $user }}:{{ $password }}@{{ (include "mongoList" .) }}/{{ $db }}')
+db=client.{{ $db }}
+```
+
+*NOTES about deletion :*
+
+- **You can safely delete this chart and recreate one later**
+- Data volumes will not be deleted
+- If you start a new {{ .Chart.Name }}, it will reuse those volumes silently.
+- If you want to delete those volume definitily : `kubectl delete pvc {{ join " " $pvcList }}`

@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "elasticsearch": {
+      "description": "elasticsearch specific configuration",
+      "type": "object",
+      "properties": {
+        "image": {
+          "description": "image docker",
+          "type": "string",
+          "enum": ["elasticsearch"],
+          "default": "elasticsearch"
+        }
+      }
+    },
+    "kibana": {
+      "description": "kibana specific configuration",
+      "type": "object",
+      "properties": {
+        "image": {
+          "description": "image docker",
+          "type": "string",
+          "enum": ["kibana"],
+          "default": "kibana"
+        }
+      }
+    },
+    "ingress": {
+      "type": "object",
+      "form": true,
+      "title": "Ingress Details",
+      "properties": {
+        "hostname": {
+            "type": "string",
+            "form": true,
+            "title": "Hostname",
+            "x-form": {
+              "hidden": true,
+              "value": "{{project.id}}-{{k8s.randomSubdomain}}.{{k8s.domain}}"
+          }
+        }
+      }
+    }
+      
+    
+  }  
+
+}
