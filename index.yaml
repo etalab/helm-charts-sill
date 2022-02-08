@@ -3,6 +3,27 @@ entries:
   chromium:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-02-08T05:37:17.059686559Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: La distribution open source du navigateur Google Chrome.
+    digest: 32661114ea54aee123bf41079a9c5d1aeb035cce4bb575528fe41107cf7d6f6e
+    home: https://www.chromium.org/chromium-projects/
+    icon: https://etalab.github.io/helm-charts-sill/icons/chromium.svg
+    keywords:
+    - Navigateur
+    name: chromium
+    sources:
+    - https://github.com/chromium/chromium
+    - https://github.com/etalab/helm-charts-sill/tree/main/charts/chromium
+    type: application
+    urls:
+    - https://github.com/etalab/helm-charts-sill/releases/download/chromium-5.0.8/chromium-5.0.8.tgz
+    version: 5.0.8
+  - apiVersion: v2
+    appVersion: latest
     created: "2022-02-07T17:05:00.801811379Z"
     dependencies:
     - name: library-chart
@@ -86,6 +107,30 @@ entries:
     - https://github.com/garronej/helm-charts-sill/releases/download/elastic-2.0.2/elastic-2.0.2.tgz
     version: 2.0.2
   flarum:
+  - apiVersion: v2
+    appVersion: v1.2.0
+    created: "2022-02-08T05:37:17.176774399Z"
+    dependencies:
+    - name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.2
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: Un simple logiciel de forum pour construire des communautés génial.
+    digest: eab9e04780c46964cdf9b967512d33aa182cefb4408b2927e31bbf8675607a0e
+    home: https://flarum.org
+    icon: https://etalab.github.io/helm-charts-sill/icons/flarum.png
+    keywords:
+    - Forum
+    name: flarum
+    sources:
+    - https://github.com/flarum/flarum
+    - https://github.com/etalab/helm-charts/tree/main/charts/flarum
+    type: application
+    urls:
+    - https://github.com/etalab/helm-charts-sill/releases/download/flarum-0.0.13/flarum-0.0.13.tgz
+    version: 0.0.13
   - apiVersion: v2
     appVersion: v1.2.0
     created: "2022-02-08T05:15:53.125164977Z"
@@ -525,4 +570,4 @@ entries:
     urls:
     - https://github.com/garronej/helm-charts-sill/releases/download/vscode-5.1.2/vscode-5.1.2.tgz
     version: 5.1.2
-generated: "2022-02-08T05:24:32.270786855Z"
+generated: "2022-02-08T05:37:17.176821099Z"
