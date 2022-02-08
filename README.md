@@ -9,7 +9,7 @@
 <p align="center">
     <br>
     <br>
-    <img src="https://user-images.githubusercontent.com/6702424/152925300-811bf4ae-f172-4be7-838a-9c396d238956.png" />
+    <img src="https://user-images.githubusercontent.com/6702424/152925573-b9707cd5-e096-4361-a8ee-82f19fb197ee.png" />
 </p>
 
 To use the repo on helm (version 3+):  
