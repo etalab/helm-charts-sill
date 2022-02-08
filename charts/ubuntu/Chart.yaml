@@ -1,8 +1,8 @@
 apiVersion: v2
 name: ubuntu
-description: Ubuntu with a graphical user interface.
+description:  Système d'exploitation. Distribution Linux la plus populaire.
 icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/ubuntu.png
-keyworks:
+keywords:
   - Linux
   - Tool
 home: https://www.ubuntu-fr.org/
@@ -22,7 +22,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 5.0.5
+version: 5.0.6
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
