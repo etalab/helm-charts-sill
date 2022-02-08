@@ -22,6 +22,36 @@ entries:
     urls:
     - https://github.com/garronej/helm-charts-sill/releases/download/chromium-5.0.7/chromium-5.0.7.tgz
     version: 5.0.7
+  elastic:
+  - apiVersion: v2
+    appVersion: "1"
+    created: "2022-02-08T05:02:04.542041015Z"
+    dependencies:
+    - enabled: true
+      name: elasticsearch
+      repository: https://helm.elastic.co
+      version: 7.13.4
+    - enabled: true
+      name: kibana
+      repository: https://helm.elastic.co
+      version: 7.13.4
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: Elasticsearch is a search engine based on the Lucene library. It
+      provides a distributed, multitenant-capable full-text search engine with an
+      HTTP web interface and schema-free JSON documents
+    digest: cd96f8c615283a9718d429fc8a9434052530cb99c8031501b41544cd9d0cd541
+    home: https://www.elastic.co/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/elk.png
+    name: elastic
+    sources:
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/elastic
+    - https://github.com/elastic/helm-charts/tree/master/elasticsearch
+    type: application
+    urls:
+    - https://github.com/garronej/helm-charts-sill/releases/download/elastic-2.0.2/elastic-2.0.2.tgz
+    version: 2.0.2
   flarum:
   - apiVersion: v2
     appVersion: v1.2.0
@@ -214,6 +244,33 @@ entries:
     urls:
     - https://github.com/garronej/helm-charts-sill/releases/download/mlflow-3.0.7/mlflow-3.0.7.tgz
     version: 3.0.7
+  mongodb:
+  - apiVersion: v2
+    appVersion: "1"
+    created: "2022-02-08T05:02:04.675193877Z"
+    dependencies:
+    - enabled: true
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.28.2
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: NoSQL document-oriented database that stores JSON-like documents
+      with dynamic schemas, simplifying the integration of data in content-driven
+      applications.
+    digest: dbadfc9d92cfb6231dfb21d80f652252873a2a4b682101422826220ea644d077
+    home: https://www.mongodb.com/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/mongodb.png
+    name: mongodb
+    sources:
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/mongodb
+    - https://github.com/bitnami/charts/tree/master/bitnami/mongodb
+    - https://github.com/bitnami/bitnami-docker-mongodb
+    type: application
+    urls:
+    - https://github.com/garronej/helm-charts-sill/releases/download/mongodb-1.2.7/mongodb-1.2.7.tgz
+    version: 1.2.7
   nocodb:
   - apiVersion: v2
     appVersion: latest
@@ -235,6 +292,25 @@ entries:
     urls:
     - https://github.com/garronej/helm-charts-sill/releases/download/nocodb-0.0.3/nocodb-0.0.3.tgz
     version: 0.0.3
+  postgis:
+  - apiVersion: v2
+    appVersion: "12"
+    created: "2022-02-08T05:02:04.933164057Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: An object-relational database management system, a database server
+    digest: 3bcc22d0dde945582c03ca1ccb6d472d8fa4fed92eb5ec4d4af3e9c72da80a3b
+    home: https://www.postgresql.org/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/post.png
+    name: postgis
+    sources:
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/postgis
+    type: application
+    urls:
+    - https://github.com/garronej/helm-charts-sill/releases/download/postgis-2.1.5/postgis-2.1.5.tgz
+    version: 2.1.5
   postgresql:
   - apiVersion: v2
     appVersion: "1"
@@ -321,4 +397,4 @@ entries:
     urls:
     - https://github.com/garronej/helm-charts-sill/releases/download/vscode-5.1.2/vscode-5.1.2.tgz
     version: 5.1.2
-generated: "2022-02-08T00:09:00.892137244Z"
+generated: "2022-02-08T05:02:04.933464466Z"
