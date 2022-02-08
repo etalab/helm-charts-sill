@@ -10,7 +10,7 @@
 To use the repo on helm (version 3+):  
 
 ```bash
-helm repo add inseefrlab https://garronej.github.io/helm-charts-sill
+helm repo add sill https://garronej.github.io/helm-charts-sill
 ```
 
 The repo is also browsable directly https://garronej.github.io/helm-charts-sill/index.yaml  
