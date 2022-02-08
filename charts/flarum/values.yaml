@@ -103,5 +103,6 @@ mariadb:
     username: "admin"
     password: "admin"
   fullnameOverride: "mariadb-flarum"
-  persistence: 
-    existingClaim: "mariadb-4-flarum"
+  primary:
+    persistence: 
+      existingClaim: "mariadb-4-flarum"

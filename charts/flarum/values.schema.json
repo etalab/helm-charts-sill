@@ -54,16 +54,22 @@
       "description": "MariaDB configuration",
       "type": "object",
       "properties": {
-        "persistence": {
+        "primary": {
           "type": "object",
-          "description": "persistance",
+          "description": "Noeud primaire",
           "properties": {
-            "existingClaim": {
-              "type": "string",
-              "description": "Volume de donnée",
-              "x-form": {
-                "hidden": true,
-                "value": "mariadb-flarum-{{k8s.randomSubdomain}}"
+            "persistence": {
+              "type": "object",
+              "description": "persistance",
+              "properties": {
+                "existingClaim": {
+                  "type": "string",
+                  "description": "Volume de donnée",
+                  "x-form": {
+                    "hidden": true,
+                    "value": "mariadb-flarum-{{k8s.randomSubdomain}}"
+                  }
+                }
               }
             }
           }
