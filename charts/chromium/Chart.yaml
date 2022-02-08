@@ -1,13 +1,13 @@
 apiVersion: v2
 name: chromium
 description: La distribution open source du navigateur Google Chrome.
-icon: https://garronej.github.io/helm-charts-sill/icons/chromium.svg
+icon: https://etalab.github.io/helm-charts-sill/icons/chromium.svg
 keywords:
   - Navigateur
 home: https://www.chromium.org/chromium-projects/
 sources:
   - https://github.com/chromium/chromium
-  - https://github.com/garronej/helm-charts-sill/tree/main/charts/chromium
+  - https://github.com/etalab/helm-charts-sill/tree/main/charts/chromium
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
@@ -21,7 +21,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 5.0.7
+version: 5.0.8
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
