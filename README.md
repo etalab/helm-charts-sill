@@ -19,7 +19,7 @@ helm repo add sill https://etalab.github.io/helm-charts-sill
 ```
 
 The repo is also browsable directly https://etalab.github.io/helm-charts-sill/index.yaml  
-- Published via [GitHub Pages](https://github.com/etalab/helm-charts/tree/gh-pages)
-- Deployed by [GitHub Actions](https://github.com/etalab/helm-charts/blob/main/.github/workflows/ci.yml)
+- Published via [GitHub Pages](https://github.com/etalab/helm-charts-sill/tree/gh-pages)
+- Deployed by [GitHub Actions](https://github.com/etalab/helm-charts-sill/blob/main/.github/workflows/ci.yml)
 
 
