@@ -574,6 +574,33 @@ entries:
     urls:
     - https://github.com/garronej/helm-charts-sill/releases/download/rstudio-6.1.7/rstudio-6.1.7.tgz
     version: 6.1.7
+  superset:
+  - apiVersion: v2
+    appVersion: "1"
+    created: "2022-03-24T09:14:46.027147442Z"
+    dependencies:
+    - enabled: true
+      name: superset
+      repository: https://apache.github.io/superset
+      version: 0.5.10
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: Apache Superset is a modern data exploration and visualization platform.
+    digest: bec17db83599a9e40ec90aad2bfcb0c127fdb9393b6282214787e8272c259b81
+    home: https://superset.apache.org/
+    icon: https://etalab.github.io/helm-charts-sill/icons/superset.png
+    keywords:
+    - Tool
+    - Data
+    name: superset
+    sources:
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/superset
+    - https://github.com/apache/superset
+    type: application
+    urls:
+    - https://github.com/etalab/helm-charts-sill/releases/download/superset-0.0.2/superset-0.0.2.tgz
+    version: 0.0.2
   ubuntu:
   - apiVersion: v2
     appVersion: latest
@@ -638,4 +665,4 @@ entries:
     urls:
     - https://github.com/garronej/helm-charts-sill/releases/download/vscode-5.1.2/vscode-5.1.2.tgz
     version: 5.1.2
-generated: "2022-02-08T06:02:53.899794589Z"
+generated: "2022-03-24T09:14:46.027374343Z"
