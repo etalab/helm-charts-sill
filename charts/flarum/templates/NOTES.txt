@@ -1,5 +1,5 @@
-Nous sommes entrain de crée un Flarum rien que pour vous! 😊   
+Nous sommes en train de créer une instance de Flarum rien que pour vous! 😊
 Cela peut prendre jusqu'à une minute...⏳  
 
-- Votre compte d'admin est : **{{ .Values.config.user }}**
-- Votre mot de passe d'admin est : **{{ .Values.config.pass }}**
+- Votre compte d'administrateur est : **{{ .Values.config.user }}**
+- Votre mot de passe d'administrateur est : **{{ .Values.config.pass }}**

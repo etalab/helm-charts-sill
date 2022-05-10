@@ -1,4 +1,4 @@
 Dans quelques instants vous allez pouvoir essayer le navigateur Chromium à l'intérieur
-d'un Ubuntu virtuel. 🤩
+d'une distribution GNU/Linux Ubuntu virtuelle. 🤩
 
 Pour ouvrir la session, vous allez avoir besoin de ce mot de passe: **{{ .Values.security.password }}**  
