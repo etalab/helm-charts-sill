@@ -1,9 +1,11 @@
 {{- if .Values.ingress.enabled -}}
-{{- $svcPort := .Values.kibana.service.port -}}
+{{ if .Values.networking.user.enabled }}
+{{- $fullName := include "library-chart.fullname" . -}}
+{{- $svcPort := .Values.networking.user.port -}}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ .Release.Name }}-kibana
+  name: {{ $fullName }}-user
   labels:
     {{- include "library-chart.labels" . | nindent 4 }}
   annotations:
@@ -12,17 +14,18 @@ spec:
 {{- if .Values.ingress.tls }}
   tls:
     - hosts:
-        - {{ .Values.ingress.hostname | quote }}
+        - {{ .Values.ingress.userHostname | quote }}
 {{- end }}
   rules:
-    - host: {{ .Values.ingress.hostname | quote }}
+    - host: {{ .Values.ingress.userHostname | quote }}
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: {{ .Release.Name }}-kibana
+                name: {{ $fullName }}
                 port: 
                   number: {{ $svcPort }}
+{{- end }}
 {{- end }}

@@ -2,7 +2,7 @@ apiVersion: v2
 name: vscode
 description: Visual Studio Code is a lightweight yet powerful source code editor with a rich ecosystem of extensions for many languages.
 icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/vscode.png
-keyworks:
+keywords:
   - IDE
   - Python
 home: https://code.visualstudio.com/
@@ -23,14 +23,14 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 5.1.2
+version: 5.1.3
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
-appVersion: latest
+appVersion: 2.6.0
 
 dependencies:
   - name: library-chart
-    version: 2.0.20
+    version: 2.1.0
     repository: https://inseefrlab.github.io/helm-charts-datascience

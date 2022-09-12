@@ -2,16 +2,16 @@
 
 service:
   image:
-    version: "inseefrlab/vscode-python:4.0.1"
+    version: "inseefrlab/vscode-python:2.6.0"
     pullPolicy: IfNotPresent
     custom:
       enabled: false
-      version: "inseefrlab/vscode-python:4.0.1"
+      version: "inseefrlab/vscode-python:2.6.0"
 
 security:
   password: "changeme"
   networkPolicy:
-    enable: false
+    enabled: false
     from:
       - ipBlock:
           cidr: 10.233.103.0/32
@@ -60,6 +60,7 @@ git:
   name: ""
   email: ""
   cache: ""
+  branch: ""
 
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
@@ -102,6 +103,9 @@ securityContext:
 
 networking:
   type: ClusterIP
+  user: 
+    enabled: false
+    port: 5000
   vscode:
     port: 80
 
@@ -112,6 +116,7 @@ ingress:
     kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hostname: chart-example.local
+  userHostname: chart-example-user.local
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local

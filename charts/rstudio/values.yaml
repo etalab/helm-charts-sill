@@ -2,11 +2,11 @@
 
 service:
   image:
-    version: "inseefrlab/rstudio:r4.1.1-spark3.2.0"
+    version: "inseefrlab/rstudio:r4.2.0-spark3.2.0"
     pullPolicy: IfNotPresent
     custom:
       enabled: false
-      version: "inseefrlab/rstudio:r4.1.1-spark3.2.0"
+      version: "inseefrlab/rstudio:r4.2.0-spark3.2.0"
 
 arg: "/data/{{ .Values.init.filename}} /init"
 
@@ -96,6 +96,7 @@ git:
   cache: ""
   token: ""
   repository: ""
+  branch: ""
 
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
@@ -135,6 +136,9 @@ securityContext: {}
 networking:
   type: ClusterIP
   clusterIP: None
+  user: 
+    enabled: false
+    port: 5000
   rstudio:
     port: 80
   sparkui:
@@ -147,6 +151,7 @@ ingress:
     kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hostname: chart-example.local
+  userHostname: chart-example-user.local
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local

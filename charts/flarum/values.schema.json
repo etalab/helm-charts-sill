@@ -11,9 +11,9 @@
           "type": "string",
           "form": true,
           "title": "Hostname",
-          "x-form": {
+          "x-onyxia": {
             "hidden": true,
-            "value": "{{project.id}}-{{k8s.randomSubdomain}}.{{k8s.domain}}"
+            "overwriteDefaultWith": "{{project.id}}-{{k8s.randomSubdomain}}.{{k8s.domain}}"
           }
         }
       }
@@ -31,16 +31,16 @@
           "type": "string",
           "description": "Mot de passe de l'administrateur",
           "default": "admin",
-          "x-form": {
-            "value": "{{project.password}}"
+          "x-onyxia": {
+            "overwriteDefaultWith": "project.password"
           }
         },
         "mail": {
           "type": "string",
           "description": "Email de l'administrateur",
           "default": "change@me.org",
-          "x-form": {
-            "value": "{{user.email}}"
+          "x-onyxia": {
+            "overwriteDefaultWith": "user.email"
           }
         },
         "title": {
@@ -65,9 +65,9 @@
                 "existingClaim": {
                   "type": "string",
                   "description": "Volume de donnée",
-                  "x-form": {
-                    "hidden": true,
-                    "value": "mariadb-flarum-{{k8s.randomSubdomain}}"
+                  "x-onyxia": {
+                    "overwriteDefaultWith": "mariadb-flarum-{{k8s.randomSubdomain}}",
+                    "hidden": true
                   }
                 }
               }

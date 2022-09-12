@@ -69,6 +69,7 @@ git:
   cache: ""
   token: ""
   repository: ""
+  branch: ""
 
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
@@ -108,6 +109,9 @@ securityContext:
 
 networking:
   type: ClusterIP
+  user: 
+    enabled: false
+    port: 5000
   ubuntu:
     port: 80
 
@@ -119,6 +123,7 @@ ingress:
     nginx.ingress.kubernetes.io/app-root: /vnc.html
     # kubernetes.io/tls-acme: "true"
   hostname: chart-example.local
+  userHostname: chart-example-user.local
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local

@@ -16,16 +16,16 @@
           "description": "Postgres user name.",
           "type": "string",
           "default": "admin",
-          "x-form": {
-            "value": "{{project.id}}"
+          "x-onyxia": {
+            "overwriteDefaultWith": "project.id"
           }
         },
         "password": {
           "description": "Postgres password.",
           "type": "string",
           "default": "changeme",
-          "x-form": {
-            "value": "{{project.password}}"
+          "x-onyxia": {
+            "overwriteDefaultWith": "project.password"
           }
         },
         "dbname": {
@@ -87,8 +87,8 @@
                   "title": "Enable network policy",
                   "description": "Only pod from the same namespace will be allowed",
                   "default": true,
-                  "x-form": {
-                    "value": "{{region.defaultNetworkPolicy}}"
+                  "x-onyxia": {
+                    "overwriteDefaultWith": "region.defaultNetworkPolicy"
                   }
                 }
               }
