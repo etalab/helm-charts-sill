@@ -3,6 +3,27 @@ entries:
   chromium:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-09-12T11:35:24.489357485Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.1.0
+    description: La distribution open source du navigateur Google Chrome.
+    digest: 651b9d66b93bcf2e1a3bbb532701f939fc679b14dc6e5778f31f757dcf7b1c7e
+    home: https://www.chromium.org/chromium-projects/
+    icon: https://etalab.github.io/helm-charts-sill/icons/chromium.svg
+    keywords:
+    - Navigateur
+    name: chromium
+    sources:
+    - https://github.com/chromium/chromium
+    - https://github.com/etalab/helm-charts-sill/tree/main/charts/chromium
+    type: application
+    urls:
+    - https://github.com/etalab/helm-charts-sill/releases/download/chromium-5.0.10/chromium-5.0.10.tgz
+    version: 5.0.10
+  - apiVersion: v2
+    appVersion: latest
     created: "2022-02-08T06:02:53.69892409Z"
     dependencies:
     - name: library-chart
@@ -67,6 +88,37 @@ entries:
   elastic:
   - apiVersion: v2
     appVersion: "1"
+    created: "2022-09-12T11:35:24.619087555Z"
+    dependencies:
+    - name: elasticsearch
+      repository: https://helm.elastic.co
+      version: 7.17.3
+    - name: kibana
+      repository: https://helm.elastic.co
+      version: 7.17.3
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: Elasticsearch est un logiciel utilisant Lucene pour l'indexation
+      et la recherche de données. Il fournit un moteur de recherche distribué et multi-entité
+      à travers une interface REST.
+    digest: 2a111ceb3b62eb3f7b7377c3d5deb3e0f29738916f256235e523b675449698b4
+    home: https://www.elastic.co/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/elk.png
+    keywords:
+    - Search
+    - Lucene
+    - Visualization
+    name: elastic
+    sources:
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/elastic
+    - https://github.com/elastic/helm-charts/tree/master/elasticsearch
+    type: application
+    urls:
+    - https://github.com/etalab/helm-charts-sill/releases/download/elastic-2.0.4/elastic-2.0.4.tgz
+    version: 2.0.4
+  - apiVersion: v2
+    appVersion: "1"
     created: "2022-02-08T05:24:31.913083111Z"
     dependencies:
     - enabled: true
@@ -128,6 +180,30 @@ entries:
     - https://github.com/garronej/helm-charts-sill/releases/download/elastic-2.0.2/elastic-2.0.2.tgz
     version: 2.0.2
   flarum:
+  - apiVersion: v2
+    appVersion: v1.2.0
+    created: "2022-09-12T11:35:24.765254337Z"
+    dependencies:
+    - name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.2
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: Un simple logiciel de forum pour construire des communautés génial.
+    digest: 4b90c1b4643bcecbac47c1d953ac49e858ea3f43438a43828f9c7f539a71744b
+    home: https://flarum.org
+    icon: https://etalab.github.io/helm-charts-sill/icons/flarum.png
+    keywords:
+    - Forum
+    name: flarum
+    sources:
+    - https://github.com/flarum/flarum
+    - https://github.com/etalab/helm-charts/tree/main/charts/flarum
+    type: application
+    urls:
+    - https://github.com/etalab/helm-charts-sill/releases/download/flarum-0.0.15/flarum-0.0.15.tgz
+    version: 0.0.15
   - apiVersion: v2
     appVersion: v1.2.0
     created: "2022-02-08T05:53:03.78500841Z"
@@ -347,6 +423,32 @@ entries:
   jupyter:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-09-12T11:35:24.920262333Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.1.0
+    description: Jupyter est une application web utilisée pour programmer dans plus
+      de 40 langages de programmation, dont Python, Julia, Ruby, R, ou encore Scala.
+    digest: 5288475495e3a29d7eff1ad1eb5107efede0f95d51bccff346376834e0365f42
+    home: https://jupyter.org/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/jupyter.png
+    keywords:
+    - Hadoop
+    - Spark
+    - Python
+    - Jupyter
+    name: jupyter
+    sources:
+    - https://github.com/InseeFrLab/jupyter-datascience
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/jupyter
+    - https://github.com/jupyter/docker-stacks
+    type: application
+    urls:
+    - https://github.com/etalab/helm-charts-sill/releases/download/jupyter-6.4.3/jupyter-6.4.3.tgz
+    version: 6.4.3
+  - apiVersion: v2
+    appVersion: latest
     created: "2022-02-08T05:24:32.030066242Z"
     dependencies:
     - name: library-chart
@@ -395,6 +497,32 @@ entries:
   mlflow:
   - apiVersion: v2
     appVersion: "1"
+    created: "2022-09-12T11:35:25.059947531Z"
+    dependencies:
+    - enabled: true
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.6.15
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: MLflow is an open source platform to manage the ML lifecycle, including
+      experimentation, reproducibility, deployment, and a central model registry.
+    digest: 21a17af8e0e0f782c44d9e320b465fd4562f269c80a96c992dd1aef1325e9f4c
+    home: https://mlflow.org
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/mlflow.png
+    keywords:
+    - ML
+    name: mlflow
+    sources:
+    - https://github.com/InseeFrLab/mlflow
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/mlflow
+    type: application
+    urls:
+    - https://github.com/etalab/helm-charts-sill/releases/download/mlflow-3.0.8/mlflow-3.0.8.tgz
+    version: 3.0.8
+  - apiVersion: v2
+    appVersion: "1"
     created: "2022-02-07T17:11:11.056717148Z"
     dependencies:
     - enabled: true
@@ -418,6 +546,35 @@ entries:
     - https://github.com/garronej/helm-charts-sill/releases/download/mlflow-3.0.7/mlflow-3.0.7.tgz
     version: 3.0.7
   mongodb:
+  - apiVersion: v2
+    appVersion: "1"
+    created: "2022-09-12T11:35:25.198046209Z"
+    dependencies:
+    - name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.21
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: NoSQL document-oriented database that stores JSON-like documents
+      with dynamic schemas, simplifying the integration of data in content-driven
+      applications.
+    digest: 808a48863cbe1ed4b3bba4fd88a2102bfe2dfea68e1c87efd83f74f9a758fc57
+    home: https://www.mongodb.com/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/mongodb.png
+    keywords:
+    - nosql
+    - Database
+    - json
+    name: mongodb
+    sources:
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/mongodb
+    - https://github.com/bitnami/charts/tree/master/bitnami/mongodb
+    - https://github.com/bitnami/bitnami-docker-mongodb
+    type: application
+    urls:
+    - https://github.com/etalab/helm-charts-sill/releases/download/mongodb-1.2.8/mongodb-1.2.8.tgz
+    version: 1.2.8
   - apiVersion: v2
     appVersion: "1"
     created: "2022-02-08T05:02:04.675193877Z"
@@ -445,6 +602,29 @@ entries:
     - https://github.com/garronej/helm-charts-sill/releases/download/mongodb-1.2.7/mongodb-1.2.7.tgz
     version: 1.2.7
   nocodb:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-09-12T11:35:25.333590654Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: NocoDB is an open source NoCode platform that turns any database
+      into a smart spreadsheet
+    digest: d20deaf8afa7a9f8357592e4c1038b967c7db19f8cda686bf41b50434ce60820
+    home: https://www.nocodb.com/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/nocodb.png
+    keywords:
+    - Tool
+    - Data
+    name: nocodb
+    sources:
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/nocodb
+    - https://hub.docker.com/r/nocodb/nocodb
+    type: application
+    urls:
+    - https://github.com/etalab/helm-charts-sill/releases/download/nocodb-0.0.6/nocodb-0.0.6.tgz
+    version: 0.0.6
   - apiVersion: v2
     appVersion: latest
     created: "2022-02-08T06:02:53.899748988Z"
@@ -514,6 +694,24 @@ entries:
   postgis:
   - apiVersion: v2
     appVersion: "12"
+    created: "2022-09-12T11:35:25.478050514Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: An object-relational database management system, a database server
+    digest: 3f0a3e7cac27dcf61bba718dc8377a4f37184f50d0cc86684efc20de4ea0c15b
+    home: https://www.postgresql.org/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/post.png
+    name: postgis
+    sources:
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/postgis
+    type: application
+    urls:
+    - https://github.com/etalab/helm-charts-sill/releases/download/postgis-2.1.6/postgis-2.1.6.tgz
+    version: 2.1.6
+  - apiVersion: v2
+    appVersion: "12"
     created: "2022-02-08T05:02:04.933164057Z"
     dependencies:
     - name: library-chart
@@ -531,6 +729,33 @@ entries:
     - https://github.com/garronej/helm-charts-sill/releases/download/postgis-2.1.5/postgis-2.1.5.tgz
     version: 2.1.5
   postgresql:
+  - apiVersion: v2
+    appVersion: "1"
+    created: "2022-09-12T11:35:25.623953305Z"
+    dependencies:
+    - enabled: true
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.0.2
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: An object-relational database management system, a database server
+    digest: 7b4c2353523260cfd1173c89873b7075638e184ff451ac3ca4e04f6afa5ae3e2
+    home: https://www.postgresql.org/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/post.png
+    keywords:
+    - SQL
+    - Database
+    name: postgresql
+    sources:
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/postgresql
+    - https://github.com/bitnami/charts/tree/master/bitnami/postgresql
+    - https://github.com/bitnami/bitnami-docker-postgresql
+    type: application
+    urls:
+    - https://github.com/etalab/helm-charts-sill/releases/download/postgresql-2.1.8/postgresql-2.1.8.tgz
+    version: 2.1.8
   - apiVersion: v2
     appVersion: "1"
     created: "2022-02-07T17:11:11.449788166Z"
@@ -554,6 +779,30 @@ entries:
     version: 2.1.7
   rstudio:
   - apiVersion: v2
+    created: "2022-09-12T11:35:25.74441698Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.1.0
+    description: R Studio is the reference environment / IDE for programming with
+      R, a programming language used for data processing and statistical analysis.
+      You can use it for spark.
+    digest: 2c49cbf5b142d2c26ce577b653e88a6cc0ffdc7fa30881d31bb3e20ecca1da0a
+    home: https://www.rstudio.com/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/rstudio.png
+    keywords:
+    - R
+    - IDE
+    name: rstudio
+    sources:
+    - https://github.com/InseeFrLab/rstudio
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/rstudio
+    - https://github.com/rocker-org/rocker
+    type: application
+    urls:
+    - https://github.com/etalab/helm-charts-sill/releases/download/rstudio-6.1.8/rstudio-6.1.8.tgz
+    version: 6.1.8
+  - apiVersion: v2
     created: "2022-02-07T17:11:11.620380278Z"
     dependencies:
     - name: library-chart
@@ -575,6 +824,31 @@ entries:
     - https://github.com/garronej/helm-charts-sill/releases/download/rstudio-6.1.7/rstudio-6.1.7.tgz
     version: 6.1.7
   superset:
+  - apiVersion: v2
+    appVersion: "1"
+    created: "2022-09-12T11:35:25.900872236Z"
+    dependencies:
+    - name: superset
+      repository: https://apache.github.io/superset
+      version: 0.5.10
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.0.20
+    description: Apache Superset is a modern data exploration and visualization platform.
+    digest: 733b079be3f457d3e548727f84bb32100c76a7a6469d46f13257013687ad99b8
+    home: https://superset.apache.org/
+    icon: https://etalab.github.io/helm-charts-sill/icons/superset.png
+    keywords:
+    - Tool
+    - Data
+    name: superset
+    sources:
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/superset
+    - https://github.com/apache/superset
+    type: application
+    urls:
+    - https://github.com/etalab/helm-charts-sill/releases/download/superset-0.0.3/superset-0.0.3.tgz
+    version: 0.0.3
   - apiVersion: v2
     appVersion: "1"
     created: "2022-03-24T09:14:46.027147442Z"
@@ -602,6 +876,28 @@ entries:
     - https://github.com/etalab/helm-charts-sill/releases/download/superset-0.0.2/superset-0.0.2.tgz
     version: 0.0.2
   ubuntu:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-09-12T11:35:26.057468394Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.1.0
+    description: Ubuntu with a graphical user interface.
+    digest: decafff63717c3566d809bdbbf3bd7651c8de96beea7e13fcc8783c3094540e9
+    home: https://www.ubuntu-fr.org/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/ubuntu.png
+    keywords:
+    - Linux
+    - Tool
+    name: ubuntu
+    sources:
+    - https://github.com/InseeFrLab/ubuntu-vnc
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/ubuntu
+    type: application
+    urls:
+    - https://github.com/etalab/helm-charts-sill/releases/download/ubuntu-5.0.7/ubuntu-5.0.7.tgz
+    version: 5.0.7
   - apiVersion: v2
     appVersion: latest
     created: "2022-02-08T05:24:32.270754454Z"
@@ -645,6 +941,30 @@ entries:
     version: 5.0.5
   vscode:
   - apiVersion: v2
+    appVersion: 2.6.0
+    created: "2022-09-12T11:35:26.180309594Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-datascience
+      version: 2.1.0
+    description: Visual Studio Code is a lightweight yet powerful source code editor
+      with a rich ecosystem of extensions for many languages.
+    digest: d58c388806ddcd0a437c3b4e23b11c7f04c298b99671bfdd77c8e8ddbacc0dc9
+    home: https://code.visualstudio.com/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/vscode.png
+    keywords:
+    - IDE
+    - Python
+    name: vscode
+    sources:
+    - https://github.com/InseeFrLab/vscode
+    - https://github.com/InseeFrLab/helm-charts-datascience/tree/master/charts/vscode
+    - https://github.com/cdr/code-server
+    type: application
+    urls:
+    - https://github.com/etalab/helm-charts-sill/releases/download/vscode-5.1.3/vscode-5.1.3.tgz
+    version: 5.1.3
+  - apiVersion: v2
     appVersion: latest
     created: "2022-02-07T18:15:03.843589424Z"
     dependencies:
@@ -665,4 +985,4 @@ entries:
     urls:
     - https://github.com/garronej/helm-charts-sill/releases/download/vscode-5.1.2/vscode-5.1.2.tgz
     version: 5.1.2
-generated: "2022-03-24T09:14:46.027374343Z"
+generated: "2022-09-12T11:35:26.180550097Z"
